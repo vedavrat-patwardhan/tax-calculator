@@ -6,13 +6,12 @@ This project is a simple single-page application designed to calculate taxes bas
 
 ```
 tax-calculator
-├── src
-│   ├── index.html        # Main HTML document for the tax calculator app
-│   ├── styles
-│   │   └── style.css     # CSS styles for the application
-│   ├── scripts
-│       └── main.js       # JavaScript code for handling user interactions
-└── README.md              # Documentation for the project
+├── index.html            # Main HTML document for the tax calculator app
+├── styles
+│   └── style.css         # CSS styles for the application
+├── scripts
+│   └── main.js           # JavaScript code for handling user interactions
+└── README.md             # Documentation for the project
 ```
 
 ## Setup Instructions
@@ -29,7 +28,7 @@ tax-calculator
    cd tax-calculator
    ```
 
-3. Open `src/index.html` in your web browser to view the application.
+3. Open `index.html` in your web browser to view the application.
 
 ## Contributing
 
