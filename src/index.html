@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Tax Calculator</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+        <div class="step active">1</div>
+        <div class="step">2</div>
+        <div class="step">3</div>
+      </div>
+
+      <section id="step1" class="step-section active">
+        <h1>Are you a salaried employee?</h1>
+        <div class="button-group">
+          <button onclick="handleEmployeeType('yes')" class="btn">Yes</button>
+          <button onclick="handleEmployeeType('no')" class="btn">No</button>
+        </div>
+      </section>
+
+      <section id="step2" class="step-section">
+        <h1>Enter your annual income</h1>
+        <div class="input-wrapper">
+          <div class="input-group">
+            <p class="currency">₹</p>
+            <input type="number" id="income" placeholder="0.00" />
+          </div>
+        </div>
+        <button onclick="calculateTax()" class="btn">Calculate Tax</button>
+      </section>
+
+      <section id="step3" class="step-section">
+        <h1>Tax Calculation Comparison</h1>
+        <div class="tax-table">
+          <div class="regime-card">
+            <h3>Old Regime (1961-2020)</h3>
+            <p class="tax-amount" id="tax1">₹0</p>
+          </div>
+          <div class="regime-card">
+            <h3>New Regime (2020)</h3>
+            <p class="tax-amount" id="tax2">₹0</p>
+          </div>
+          <div class="regime-card">
+            <h3>New Regime (2023)</h3>
+            <p class="tax-amount" id="tax3">₹0</p>
+          </div>
+          <div class="regime-card">
+            <h3>Latest Regime (2025)</h3>
+            <p class="tax-amount" id="tax4">₹0</p>
+          </div>
+        </div>
+        <button onclick="resetCalculator()" class="btn">Calculate Again</button>
+      </section>
+    </div>
+    <div id="taxModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="modalTitle">Tax Calculation Details</h2>
+        <div id="taxDetails" class="tax-details">
+          <!-- Details will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
